@@ -15,9 +15,8 @@ public class Context {
 	}
 	
 	//Método de estrategia 'c'
-	public void someMethod()
+	public void corta()
 	{
-		strategy.strategyMethod();
+		strategy.dividir();
 	}
-
 }
