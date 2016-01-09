@@ -5,20 +5,57 @@ package com.noegonmar.patern.singleton;
 public class AppUser {
 
 	private String username;
-	private String language;
-	private static AppUser appConfig;
+	private String numagente;
+	private static AppUser appUser;
 
-	public static AppUser getAppUser(String username, String language) {
-		if (appConfig == null) {
-			appConfig = new AppUser(username, username);
+	/**
+	 * Dado que el constructor de esta clase es privado (por usar Singleton),
+	 * esta función nos devuelve el objeto creado con anterioridad o,
+	 * si no está creado, lo crea en ese mismo momento.
+	 * Así se evita que existan más de 1 objeto de esta clase a la vez
+	 *
+	 * @return AppUser
+	 */
+	public static AppUser getAppUser() {
+		if (appUser == null) {
+			appUser = new AppUser();
 		}
-		return appConfig;
+		return appUser;
+	}
+	
+	/**
+	 * Dado que el constructor de esta clase es privado (por usar Singleton),
+	 * esta función nos devuelve el objeto creado con anterioridad o,
+	 * si no está creado, lo crea en ese mismo momento.
+	 * Así se evita que existan más de 1 objeto de esta clase a la vez
+	 *
+	 * @return AppUser
+	 */
+	public static AppUser getAppUser(String username, String numagente) {
+		if (appUser == null) {
+			appUser = new AppUser(username, numagente);
+		}
+		return appUser;
 	}
 
-	// Singleton pattern >> Private constructor
-	private AppUser(String username, String language) {
+	/**
+	 * Constructor privado para respetar el patrón Singleton
+	 * @param username
+	 * @param numagente
+	 */
+	private AppUser(String username, String numagente) {
 		this.username = username;
-		this.language = language;
+		this.numagente = numagente;
+	}
+	
+	/**
+	 * Constructor privado para respetar el patrón Singleton
+	 * @param username
+	 * @param numagente
+	 */
+	private AppUser() {
+		this.username = "";
+		this.numagente = "";
 	}
 
 	public String getUsername() {
@@ -29,12 +66,12 @@ public class AppUser {
 		this.username = username;
 	}
 
-	public String getLanguage() {
-		return language;
+	public String getNumAgente() {
+		return numagente;
 	}
 
-	public void setLanguage(String language) {
-		this.language = language;
+	public void setNumAgente(String numagente) {
+		this.numagente = numagente;
 	}
 
 }

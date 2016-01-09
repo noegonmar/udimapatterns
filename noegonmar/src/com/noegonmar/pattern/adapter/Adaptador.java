@@ -1,28 +1,22 @@
 package com.noegonmar.pattern.adapter;
 
+public class Adaptador extends Objetivo {
 
-public class Adaptador extends Objetivo{
-	
-	DVDCapaTriple dvdTriple = new DVDCapaTriple();
+	RadarConCarcel radarConCarcel = new RadarConCarcel();
 
 	@Override
 	public void getNombre() {
-		dvdTriple.getName();
-		
+		radarConCarcel.getName();
 	}
 
 	@Override
 	public void getPrecio() {
-		dvdTriple.getPrice();
-		
+		radarConCarcel.getPrice();
 	}
 
 	@Override
 	public void getCapacidad() {
-		dvdTriple.getCapacity();
-		
+		radarConCarcel.getCapacity();
 	}
-
-	
 
 }

@@ -1,6 +1,6 @@
 package com.noegonmar.pattern.adapter;
 
-public class DVDCapaTriple{
+public class RadarConCarcel{
 
     public String getCapacity() {
             return "4.7GB";

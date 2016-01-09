@@ -1,25 +1,25 @@
 package com.noegonmar.patter.abstractfactory;
 
-public class DVDCapaSimple extends DVD{
+public class RadarConPuntos extends Radar{
 
 	@Override
     public Prototipo clone() {
-            return new DVDCapaSimple();
+            return new RadarConPuntos();
     }
  
     @Override
     public String getCapacidad() {
-            return "4.7GB";
+            return "5.4GB";
     }
  
     @Override
     public String getNombre() {
-            return "DVD Capa Simple";
+            return "DVD Capa Doble";
     }
  
     @Override
     public String getPrecio() {
-            return "5.00$";
+            return "7.00$";
     }
 
 }

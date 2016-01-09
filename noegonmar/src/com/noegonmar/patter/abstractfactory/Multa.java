@@ -1,6 +1,6 @@
 package com.noegonmar.patter.abstractfactory;
 
-public abstract class Disco implements Prototipo{
+public abstract class Multa implements Prototipo{
 
 	@Override
     public abstract Prototipo clone();
