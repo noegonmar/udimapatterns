@@ -17,6 +17,6 @@ public class PatternContext {
 
 		usingPattern.usePattern();
 
-		System.out.println("---------- Fin del patrón Singleton -----------");
+		System.out.println("---------- Fin del patrón "+usingPattern.getPatternName()+" -----------");
 	}
 }
