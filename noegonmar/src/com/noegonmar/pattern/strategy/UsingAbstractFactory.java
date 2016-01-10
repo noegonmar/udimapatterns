@@ -8,6 +8,7 @@ import com.noegonmar.patter.abstractfactory.Semaforo;
 
 public class UsingAbstractFactory extends Using {
 
+	@SuppressWarnings("unused")
 	@Override
 	public void usePattern() {
 

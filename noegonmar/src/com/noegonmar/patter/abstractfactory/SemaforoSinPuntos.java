@@ -1,5 +1,7 @@
 package com.noegonmar.patter.abstractfactory;
 
+import java.util.Date;
+
 public class SemaforoSinPuntos extends Semaforo {
 
 	@Override
@@ -8,18 +10,28 @@ public class SemaforoSinPuntos extends Semaforo {
 	}
 
 	@Override
-	public String getCapacidad() {
-		return "18.7Gb";
+	public String getMatricula() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
-	public String getNombre() {
-		return "BlueRay";
+	public Date getFecha() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
-	public String getPrecio() {
-		return "9$";
+	public float getSancion() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
+
+	@Override
+	public int getPuntos() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 
 }

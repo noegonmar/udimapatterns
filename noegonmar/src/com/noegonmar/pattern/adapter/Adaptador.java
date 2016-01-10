@@ -1,22 +1,44 @@
 package com.noegonmar.pattern.adapter;
 
-public class Adaptador extends Objetivo {
+import java.util.Date;
+
+import com.noegonmar.patter.abstractfactory.Multa;
+import com.noegonmar.patter.abstractfactory.Prototipo;
+
+public class Adaptador extends Multa {
 
 	RadarConCarcel radarConCarcel = new RadarConCarcel();
 
 	@Override
-	public void getNombre() {
-		radarConCarcel.getName();
+	public Prototipo clone() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
-	public void getPrecio() {
-		radarConCarcel.getPrice();
+	public String getMatricula() {
+		return radarConCarcel.dimeMatricula();
 	}
 
 	@Override
-	public void getCapacidad() {
-		radarConCarcel.getCapacity();
+	public Date getFecha() {
+		return radarConCarcel.dimeFechaMulta();
+	}
+
+	@Override
+	public float getSancion() {
+		// TODO
+		String sancion = radarConCarcel.dimeSancion();
+		String[] arrSancion = sancion.split("::");
+		return Float.parseFloat(arrSancion[1]);
+	}
+
+	@Override
+	public int getPuntos() {
+		String sancion = radarConCarcel.dimeSancion();
+		String[] arrSancion = sancion.split("::");
+		return Integer.parseInt(arrSancion[2]);
+		
 	}
 
 }
