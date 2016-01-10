@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.1.9" icons="true" always-add-relationships="true" generalizations="true" realizations="true" 
   associations="true" dependencies="true" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="com.noegonmar.pattern.strategy.UsingAdapter" project="noegonmar" 
-    file="/noegonmar/src/com/noegonmar/pattern/strategy/UsingAdapter.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="116" width="161" x="-182" y="299"/>    
+  <class id="1" language="java" name="com.noegonmar.pattern.strategy.PatternContext" project="noegonmar" 
+    file="/noegonmar/src/com/noegonmar/pattern/strategy/PatternContext.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="554" y="77"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -12,7 +12,7 @@
   </class>  
   <class id="2" language="java" name="com.noegonmar.pattern.strategy.Using" project="noegonmar" 
     file="/noegonmar/src/com/noegonmar/pattern/strategy/Using.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="116" width="161" x="19" y="143"/>    
+    <position height="-1" width="-1" x="550" y="249"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -21,80 +21,64 @@
   </class>  
   <class id="3" language="java" name="com.noegonmar.pattern.strategy.UsingSingleton" project="noegonmar" 
     file="/noegonmar/src/com/noegonmar/pattern/strategy/UsingSingleton.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="116" width="161" x="19" y="299"/>    
+    <position height="-1" width="-1" x="180" y="404"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="4" language="java" name="com.noegonmar.pattern.strategy.PatternContext" project="noegonmar" 
-    file="/noegonmar/src/com/noegonmar/pattern/strategy/PatternContext.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="116" width="189" x="19" y="-13"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="5" language="java" name="com.noegonmar.pattern.strategy.UsingAbstractFactory" project="noegonmar" 
+  <class id="4" language="java" name="com.noegonmar.pattern.strategy.UsingAbstractFactory" project="noegonmar" 
     file="/noegonmar/src/com/noegonmar/pattern/strategy/UsingAbstractFactory.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="116" width="174" x="220" y="299"/>    
+    <position height="-1" width="-1" x="434" y="404"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="6" language="java" name="com.noegonmar.app.Main" project="noegonmar" 
-    file="/noegonmar/src/com/noegonmar/app/Main.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="98" width="125" x="310" y="23"/>    
+  <class id="5" language="java" name="com.noegonmar.pattern.strategy.CSVListar" project="noegonmar" 
+    file="/noegonmar/src/com/noegonmar/pattern/strategy/CSVListar.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="655" y="406"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <generalization id="7">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="2"/>  
-  </generalization>  
-  <generalization id="8">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="2"/>  
-  </generalization>  
-  <dependency id="9">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="5"/>  
-  </dependency>  
-  <dependency id="10">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="3"/>  
-  </dependency>  
-  <generalization id="11">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="2"/>  
-  </generalization>  
-  <dependency id="12">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="4"/>  
-  </dependency>  
-  <association id="13">    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="14" name="usingPattern">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="15" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
+  <class id="6" language="java" name="com.noegonmar.pattern.strategy.CSVEliminar" project="noegonmar" 
+    file="/noegonmar/src/com/noegonmar/pattern/strategy/CSVEliminar.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="887" y="407"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <association id="7">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="8" name="usingPattern"/>      
+      <multiplicity id="9" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <dependency id="16">    
+  <generalization id="10">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="11">    
     <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="4"/>  
-  </dependency>  
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="12">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="13">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    

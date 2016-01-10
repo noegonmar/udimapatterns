@@ -76,7 +76,7 @@ public class CSVWrapper {
 					mmgcp.setSancion(Integer.parseInt(multa[6]));
 					mmgcp.setPuntos(Integer.parseInt(multa[7]));
 					mmgcp.setAgente(multa[8]);
-					mmgcp.setCarcel(Boolean.parseBoolean(multa[9]));
+					mmgcp.setCarcel(multa[9]);
 
 					arrMultas.add(mmgcp);
 					break;
@@ -103,17 +103,16 @@ public class CSVWrapper {
 			}
 		}
 	}
-	
-	
+
 	public boolean eliminar(String idMulta) throws IOException {
 
 		boolean encontrada = false;
-		
+
 		String csvFile = "db/multas.csv";
 		BufferedReader br = null;
 		String line = "";
 		String cvsSplitBy = ",";
-		
+
 		File csv = new File(csvFile);
 		File tempFile = new File("db/multas.csvtmp");
 		BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
@@ -131,19 +130,18 @@ public class CSVWrapper {
 				}
 
 				String[] multa = line.split(cvsSplitBy);
-				
-				if (multa[0].equals(idMulta)){
+
+				if (multa[0].equals(idMulta)) {
 					encontrada = true;
 					continue;
 				}
 				writer.write(line + System.getProperty("line.separator"));
 			}
-			
-			writer.close(); 
-			br.close(); 
-			
+
+			writer.close();
+			br.close();
+
 			tempFile.renameTo(csv);
-			
 
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -160,4 +158,5 @@ public class CSVWrapper {
 		}
 		return encontrada;
 	}
+
 }

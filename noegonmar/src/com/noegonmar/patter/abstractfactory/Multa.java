@@ -3,7 +3,6 @@ package com.noegonmar.patter.abstractfactory;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Date;
 
 public abstract class Multa {
 
@@ -78,6 +77,12 @@ public abstract class Multa {
 					System.in));
 			System.out.println("Matrícula: ");
 			this.matricula = br.readLine();
+			System.out.println("Vel. Vía: ");
+			this.velocidadVia = Integer.parseInt(br.readLine());
+			System.out.println("Vel. Vehículo: ");
+			this.velocidadVehiculo = Integer.parseInt(br.readLine());
+			System.out.println("Sanción: ");
+			this.sancion = Integer.parseInt(br.readLine());
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

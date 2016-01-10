@@ -1,5 +1,7 @@
+
+
 ---------------------
-Seleccione una opción (Estamos usando Strategy)
+Seleccione una opción (Menú implementado con Strategy)
 ---------------------
 1 ver usuario logado (usar singleton)
 2 crear multa

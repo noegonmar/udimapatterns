@@ -17,14 +17,13 @@ import com.noegonmar.pattern.decorator.DecoradorMultaMuyGraveConPuntos;
 
 public class UsingAbstractFactory extends Using {
 
-	@SuppressWarnings("unused")
 	@Override
 	public void usePattern() {
 
 		// Usamos el patrón Abstract Factory
-		FabricaMultas fabrica;
-		MultaGrave multaGrave;
-		MultaMuyGrave multaMuyGrave;
+		FabricaMultas fabrica = null;
+		MultaGrave multaGrave = null;
+		MultaMuyGrave multaMuyGrave = null;
 
 		try {
 			int accion = 0;
@@ -39,7 +38,6 @@ public class UsingAbstractFactory extends Using {
 					System.err.println("Opción inválida!");
 				}
 
-				PatternContext paternContext = null;
 				switch (accion) {
 				case 1:
 					fabrica = new FabricaMultasSinPuntos();
@@ -47,7 +45,7 @@ public class UsingAbstractFactory extends Using {
 					DecoradorMultaGraveSinPuntos decoradorMultaGraveSinPuntos = new DecoradorMultaGraveSinPuntos(
 							multaGrave);
 					decoradorMultaGraveSinPuntos.asistente();
-					
+
 					multaGrave.guardar();
 
 					break;
@@ -57,7 +55,7 @@ public class UsingAbstractFactory extends Using {
 					DecoradorMultaGraveConPuntos decoradorMultaGraveConPuntos = new DecoradorMultaGraveConPuntos(
 							multaGrave);
 					decoradorMultaGraveConPuntos.asistente();
-					
+
 					multaGrave.guardar();
 
 					break;
@@ -67,6 +65,8 @@ public class UsingAbstractFactory extends Using {
 					DecoradorMultaMuyGraveConPuntos decoradorMultaMuyGraveConPuntos = new DecoradorMultaMuyGraveConPuntos(
 							multaMuyGrave);
 					decoradorMultaMuyGraveConPuntos.asistente();
+
+					multaMuyGrave.guardar();
 					break;
 				case 9:
 					// Volvemos al menú anterior

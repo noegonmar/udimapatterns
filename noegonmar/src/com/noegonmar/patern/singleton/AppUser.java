@@ -1,5 +1,9 @@
 package com.noegonmar.patern.singleton;
 
+import java.util.HashMap;
+
+import com.noegonmar.app.ClaveValor;
+
 // noegonmar: Singleton Patter - Creational pattern design
 
 public class AppUser {
@@ -7,6 +11,8 @@ public class AppUser {
 	private String username;
 	private String numagente;
 	private static AppUser appUser;
+	
+	private HashMap<String, ClaveValor> listaUsuarios;
 
 	/**
 	 * Dado que el constructor de esta clase es privado (por usar Singleton),
@@ -47,6 +53,7 @@ public class AppUser {
 	private AppUser(String username, String numagente) {
 		this.username = username;
 		this.numagente = numagente;
+		this.listaUsuarios = this.loadUsers();
 	}
 
 	/**
@@ -58,6 +65,16 @@ public class AppUser {
 	private AppUser() {
 		this.username = "";
 		this.numagente = "";
+		this.listaUsuarios = this.loadUsers();
+	}
+	
+	
+
+	private HashMap<String, ClaveValor> loadUsers() {
+		HashMap<String, ClaveValor> arrUsuarios = new HashMap<String, ClaveValor>();
+		arrUsuarios.put("udima", new ClaveValor("udima", "udim4", "10"));
+		arrUsuarios.put("noe", new ClaveValor("noe", "n03", "20"));
+		return arrUsuarios;
 	}
 
 	public String getUsername() {
@@ -74,6 +91,14 @@ public class AppUser {
 
 	public void setNumAgente(String numagente) {
 		this.numagente = numagente;
+	}
+
+	public HashMap<String, ClaveValor> getListaUsuarios() {
+		return listaUsuarios;
+	}
+
+	public void setListaUsuarios(HashMap<String, ClaveValor> listaUsuarios) {
+		this.listaUsuarios = listaUsuarios;
 	}
 
 }

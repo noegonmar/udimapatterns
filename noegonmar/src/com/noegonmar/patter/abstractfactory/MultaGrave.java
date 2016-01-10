@@ -1,11 +1,11 @@
 package com.noegonmar.patter.abstractfactory;
 
 import java.io.BufferedWriter;
-import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.io.UnsupportedEncodingException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public abstract class MultaGrave extends Multa {
 
@@ -27,6 +27,11 @@ public abstract class MultaGrave extends Multa {
 	public void guardar() {
 
 		try {
+			SimpleDateFormat sdf = new SimpleDateFormat("YYMMddHHmmss");
+			this.idMulta = sdf.format(new Date());
+			sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+			this.fecha = sdf.format(new Date());
+
 			PrintWriter out = new PrintWriter(new BufferedWriter(
 					new FileWriter("db/multas.csv", true)));
 			out.println(this.toCSV());

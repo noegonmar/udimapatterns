@@ -1,9 +1,11 @@
------------------------------------
-Seleccione el tipo de multa a crear
------------------------------------
-1 Sin puntos Grave
-2 Con puntos Grave
-3 Con puntos Muy Grave
-9 salir
 
-¿Tipo de multa?:  
+
+  ------------------------------------------------
+  CREAR MULTA: Seleccione el tipo de multa a crear
+  ------------------------------------------------
+  1 Sin puntos Grave
+  2 Con puntos Grave
+  3 Con puntos Muy Grave
+  9 Volver al menú principal
+  
+  ¿Tipo de multa a crear?:  

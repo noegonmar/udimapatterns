@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 import com.noegonmar.patern.singleton.AppUser;
+import com.noegonmar.pattern.strategy.CSVEliminar;
+import com.noegonmar.pattern.strategy.CSVListar;
 import com.noegonmar.pattern.strategy.PatternContext;
 import com.noegonmar.pattern.strategy.Using;
 import com.noegonmar.pattern.strategy.UsingAbstractFactory;
@@ -13,33 +15,52 @@ import com.noegonmar.pattern.strategy.UsingSingleton;
 public class Main {
 
 	public static void main(String[] args) throws IOException {
-		
+
 		// Login en la app
 		ConsoleWrapper.printTemplate("WelcomeMessage", true);
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		System.out.println("Usuario: ");
+		
 		try {
-			String user = br.readLine();
-			String pass = ConsoleWrapper.promptPassword();
-
-			// Eclipse debug pourpose
-			if (pass.equals("")) {
-				System.out.println("Contraseña: ");
-				pass = br.readLine();
+			
+			int intentos = 0;
+			boolean logado = false;
+			
+			String user = "";
+			String pass = "";
+			String agente = "";
+			
+			while (intentos < 3 && !logado) {
+				System.out.println("Usuario: ");
+				user = br.readLine();
+				pass = ConsoleWrapper.promptPassword();
+	
+				// Eclipse debug pourpose
+				if (pass.equals("")) {
+					System.out.println("Contraseña: ");
+					pass = br.readLine();
+				}
+	
+				Login login = new Login(user, pass);
+				
+				if (login.checkCredentials()){
+					logado = true;
+					agente = login.getAgente();
+				}
+				else{
+					System.out.println("Credenciales inválidas...");
+					System.out.println("Vuelva a intentarlo:");
+				}
+				intentos++;
+			
 			}
 
-			Login login = new Login(user, pass);
-
 			// Comprobamos que el login ha sido correcto
-			if (login.checkCredentials()) {
-
-				System.out.println("Nº Agente: ");
-				String numagente = br.readLine();
+			if (logado) {
 
 				// Si estamos dentro, utilizamos singleton para tener el usuario
 				// logado en toda la aplicación
-				AppUser.getAppUser(user, numagente);
+				AppUser.getAppUser(user, agente);
 
 				int accion = 0;
 
@@ -81,17 +102,16 @@ public class Main {
 						paternContext.use();
 						break;
 					case 3:
-						// Listar las multas de una matrícula dada
-						System.out.println("Matrícula: ");
-						String matricula = br.readLine();
-						CSVWrapper csvw = new CSVWrapper();
-						csvw.listar(matricula);
+						Using csvListar = new CSVListar();
+						paternContext = new PatternContext(csvListar);
+						paternContext.use();
+
 						break;
 					case 4:
-						System.out.println("Id Multa: ");
-						String idMulta = br.readLine();
-						csvw = new CSVWrapper();
-						csvw.eliminar(idMulta);
+						Using csnEliminar = new CSVEliminar();
+						paternContext = new PatternContext(csnEliminar);
+						paternContext.use();
+
 						break;
 					case 9:
 						System.out.println("Hasta pronto!");
@@ -99,7 +119,7 @@ public class Main {
 					}
 				}
 			} else {
-				System.out.println("Credenciales inválidas");
+				System.out.println("Credenciales inválidas. Lo sentimos");
 			}
 		} catch (IOException e) {
 			e.printStackTrace();

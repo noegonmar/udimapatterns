@@ -10,31 +10,18 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="2" language="java" name="com.noegonmar.pattern.strategy.UsingSingleton" project="noegonmar" 
-    file="/noegonmar/src/com/noegonmar/pattern/strategy/UsingSingleton.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="500" y="84"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <association id="3">    
+  <association id="2">    
     <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="4" name="appUser">        
+      <attribute id="3" name="appUser">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="5" minimum="0" maximum="1">        
+      <multiplicity id="4" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="1" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <dependency id="6">    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="1"/>  
-  </dependency>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    
