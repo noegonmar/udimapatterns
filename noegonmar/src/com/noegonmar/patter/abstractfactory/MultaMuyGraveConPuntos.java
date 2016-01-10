@@ -2,6 +2,12 @@ package com.noegonmar.patter.abstractfactory;
 
 import com.noegonmar.patern.singleton.AppUser;
 
+/**
+ * Producto concreto de la factoría que extiende de la clase abstracta MultaMuyGrave
+ * 
+ * @author noegonmar
+ *
+ */
 public class MultaMuyGraveConPuntos extends MultaMuyGrave {
 
 	final static String tipoMulta = "MMGCP";

@@ -2,6 +2,11 @@ package com.noegonmar.app;
 
 import java.io.Serializable;
 
+/**
+ * Enum requerido para definir los tipos de multa existentes
+ * @author noegonmar
+ *
+ */
 public enum tipoMulta implements Serializable {
 
 	MGSP, MGCP, MMGCP;

@@ -15,6 +15,14 @@ import com.noegonmar.pattern.decorator.DecoradorMultaGraveConPuntos;
 import com.noegonmar.pattern.decorator.DecoradorMultaGraveSinPuntos;
 import com.noegonmar.pattern.decorator.DecoradorMultaMuyGraveConPuntos;
 
+/**
+ * Algorimto que usa el patrón AbstractFactory a través del patrón Strategy
+ * 
+ * Extiende de Using e implementa el método usePattern() para formar parte de la estrategia
+ * 
+ * @author noegonmar
+ *
+ */
 public class UsingAbstractFactory extends Using {
 
 	@Override
@@ -29,7 +37,8 @@ public class UsingAbstractFactory extends Using {
 			int accion = 0;
 
 			while (accion != Config.APP_OPCION_SALIR) {
-				ConsoleWrapper.printTemplate("MenuCreate", true);
+				//Imprimimos el menú de creación
+				ConsoleWrapper.printTemplate("MenuCreate");
 				try {
 					BufferedReader br = new BufferedReader(
 							new InputStreamReader(System.in));
@@ -38,20 +47,30 @@ public class UsingAbstractFactory extends Using {
 					System.err.println("Opción inválida!");
 				}
 
+				//Cada acción crea una multa (productoConcreto) distinta
 				switch (accion) {
 				case 1:
+					//Creación de una multa sin puntos a través de AbstractFactory
 					fabrica = new FabricaMultasSinPuntos();
 					multaGrave = fabrica.crearMultaGrave();
+
+					//Para crear la multa nos hacen falta una serie de datos
+					//estos datos los pedimos de una manera u otra a través del patron decorador
 					DecoradorMultaGraveSinPuntos decoradorMultaGraveSinPuntos = new DecoradorMultaGraveSinPuntos(
 							multaGrave);
 					decoradorMultaGraveSinPuntos.asistente();
 
+					//Guardamos la multa creada
 					multaGrave.guardar();
 
 					break;
 				case 2:
+					//Creación de una multa sin puntos a través de AbstractFactory
 					fabrica = new FabricaMultasConPuntos();
 					multaGrave = fabrica.crearMultaGrave();
+					
+					//Para crear la multa nos hacen falta una serie de datos
+					//estos datos los pedimos de una manera u otra a través del patron decorador
 					DecoradorMultaGraveConPuntos decoradorMultaGraveConPuntos = new DecoradorMultaGraveConPuntos(
 							multaGrave);
 					decoradorMultaGraveConPuntos.asistente();
@@ -60,12 +79,17 @@ public class UsingAbstractFactory extends Using {
 
 					break;
 				case 3:
+					//Creación de una multa sin puntos a través de AbstractFactory
 					fabrica = new FabricaMultasConPuntos();
 					multaMuyGrave = fabrica.crearMultaMuyGrave();
+					
+					//Para crear la multa nos hacen falta una serie de datos
+					//estos datos los pedimos de una manera u otra a través del patron decorador
 					DecoradorMultaMuyGraveConPuntos decoradorMultaMuyGraveConPuntos = new DecoradorMultaMuyGraveConPuntos(
 							multaMuyGrave);
 					decoradorMultaMuyGraveConPuntos.asistente();
 
+					//Guardamos la multa creada
 					multaMuyGrave.guardar();
 					break;
 				case 9:
@@ -73,7 +97,7 @@ public class UsingAbstractFactory extends Using {
 					break;
 				}
 			}
-			System.out.println("Multa creada!");
+			System.out.println(">> Multa creada!");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

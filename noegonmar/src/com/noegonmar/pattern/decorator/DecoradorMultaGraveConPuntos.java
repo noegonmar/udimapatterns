@@ -5,8 +5,15 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 import com.noegonmar.patter.abstractfactory.Multa;
-import com.noegonmar.patter.abstractfactory.MultaGrave;
+import com.noegonmar.patter.abstractfactory.MultaGraveConPuntos;
 
+/**
+ * Decorador que hace que el asistente de creación de multas nos pregunte por
+ * los datos básicos y además por los puntos de la multa
+ * 
+ * @author noegonmar
+ *
+ */
 public class DecoradorMultaGraveConPuntos extends Decorador {
 
 	public DecoradorMultaGraveConPuntos(Multa multa) {
@@ -14,6 +21,9 @@ public class DecoradorMultaGraveConPuntos extends Decorador {
 
 	}
 
+	/**
+	 * Asistente extendido con la inclusión del atributo "Puntos"
+	 */
 	public void asistente() {
 		System.out.println("----------  Usando patrón Decorador  ----------");
 		super.asistente();
@@ -21,7 +31,7 @@ public class DecoradorMultaGraveConPuntos extends Decorador {
 			BufferedReader br = new BufferedReader(new InputStreamReader(
 					System.in));
 			System.out.println("Puntos: ");
-			((MultaGrave) this.getMulta()).setPuntos(Integer.parseInt(br
+			((MultaGraveConPuntos) this.getMulta()).setPuntos(Integer.parseInt(br
 					.readLine()));
 		} catch (IOException e) {
 			e.printStackTrace();

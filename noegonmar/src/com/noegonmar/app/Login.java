@@ -2,8 +2,15 @@ package com.noegonmar.app;
 
 import java.util.HashMap;
 
-import com.noegonmar.patern.singleton.AppUser;
-
+/**
+ * Clase que implementa el login de la aplicación.
+ * 
+ * Checkea las credenciales para que se pueda instanciar la clase AppUser
+ * en la que se utiliza el patrón singleton
+ * 
+ * @author noegonmar
+ *
+ */
 public class Login {
 
 	private String user;
@@ -16,7 +23,7 @@ public class Login {
 
 	public boolean checkCredentials() {
 		
-		HashMap<String, ClaveValor> usuarios = AppUser.getAppUser().getListaUsuarios();
+		HashMap<String, ClaveValor> usuarios = Config.getAppUsers();
 		
 		if (usuarios.containsKey(this.user)){
 			if (usuarios.get(this.user).valor.equals(this.pass)){
@@ -32,7 +39,7 @@ public class Login {
 	}
 
 	public String getAgente() {
-		HashMap<String, ClaveValor> usuarios = AppUser.getAppUser().getListaUsuarios();
+		HashMap<String, ClaveValor> usuarios = Config.getAppUsers();
 		
 		if (usuarios.containsKey(this.user)){
 			if (usuarios.get(this.user).valor.equals(this.pass)){

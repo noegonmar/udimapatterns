@@ -1,5 +1,11 @@
 package com.noegonmar.patter.abstractfactory;
 
+/**
+ * Clase que implementa las operaciones de creación de productos concretos
+ * 
+ * @author noegonmar
+ *
+ */
 public class FabricaMultasSinPuntos implements FabricaMultas {
 
 	MultaGraveSinPuntos mgsp = new MultaGraveSinPuntos();

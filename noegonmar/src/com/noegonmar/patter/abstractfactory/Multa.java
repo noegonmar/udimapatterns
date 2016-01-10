@@ -4,6 +4,18 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * Superclase auxiliar para encapsular los elementos comunes de los productos concretos
+ * de la factoría (multaGrave y multaMuyGrave)
+ * 
+ * En ella se definenen una serie de atributos común a todos los productos.
+ * 
+ * Ademas nos es útil para que forme parte del patrón decorador que establece
+ * los parámetros necesarios para poder crear un tipo de multa u otra.
+ * 
+ * @author noegonmar
+ *
+ */
 public abstract class Multa {
 
 	String idMulta;
@@ -70,6 +82,12 @@ public abstract class Multa {
 		this.agente = agente;
 	}
 
+	/**
+	 * Método utilizado para implementar el patrón Decorador
+	 * 
+	 * Con él, podemos definir una base de "decoración" e ir decorando
+	 * lo necesario según el tipo de multa que creemos.
+	 */
 	public void wizard() {
 
 		try {

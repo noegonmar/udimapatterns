@@ -12,12 +12,22 @@ import com.noegonmar.pattern.strategy.Using;
 import com.noegonmar.pattern.strategy.UsingAbstractFactory;
 import com.noegonmar.pattern.strategy.UsingSingleton;
 
+/**
+ * Punto de entrada de la aplicación.
+ * 
+ * En esta clase se instancia AppUser una vez que se ha logado (Singleton), y muestra
+ * el menú principal de la aplicación (Strategy) a través del cual
+ * podremos interactuar de diferentes formas.
+ * 
+ * @author noegonmar
+ *
+ */
 public class Main {
 
 	public static void main(String[] args) throws IOException {
 
 		// Login en la app
-		ConsoleWrapper.printTemplate("WelcomeMessage", true);
+		ConsoleWrapper.printTemplate("WelcomeMessage");
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
@@ -65,7 +75,7 @@ public class Main {
 				int accion = 0;
 
 				while (accion != Config.APP_OPCION_SALIR) {
-					ConsoleWrapper.printTemplate("MenuPpal", true);
+					ConsoleWrapper.printTemplate("MenuPpal");
 					try {
 						accion = Integer.parseInt(br.readLine());
 					} catch (NumberFormatException nfe) {

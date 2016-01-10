@@ -7,6 +7,18 @@ import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * 
+ * Las multas de tipo Muy Graves siempre tienen repercusión en puntos del carnet,
+ * con lo que el atributo de puntos estará definido e implementado a este nivel
+ * para asegurar que todos los objetos concretos de esta fábrica tengan la gestión
+ * de puntos implementada.
+ * 
+ * El atributo carcel lo gestionarán los hijos de esta clase
+ * 
+ * @author noegonmar
+ *
+ */
 public abstract class MultaMuyGrave extends Multa {
 
 	Boolean carcel = false;

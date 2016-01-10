@@ -7,6 +7,13 @@ import java.io.InputStreamReader;
 import com.noegonmar.patter.abstractfactory.Multa;
 import com.noegonmar.patter.abstractfactory.MultaMuyGrave;
 
+/**
+ * Decorador que hace que el asistente de creación de multas nos pregunte por
+ * los datos básicos y además por los puntos de la multa así como si tiene o no pena de carcel
+ * 
+ * @author noegonmar
+ *
+ */
 public class DecoradorMultaMuyGraveConPuntos extends Decorador {
 
 	public DecoradorMultaMuyGraveConPuntos(Multa multa) {
@@ -14,6 +21,9 @@ public class DecoradorMultaMuyGraveConPuntos extends Decorador {
 
 	}
 
+	/**
+	 * Asistente extendido con la inclusión de los atributos "Puntos" y Carcel"
+	 */
 	public void asistente() {
 		System.out.println("----------  Usando patrón Decorador  ----------");
 		super.asistente();

@@ -14,15 +14,28 @@ import com.noegonmar.patter.abstractfactory.MultaGraveConPuntos;
 import com.noegonmar.patter.abstractfactory.MultaGraveSinPuntos;
 import com.noegonmar.patter.abstractfactory.MultaMuyGraveConPuntos;
 
+/**
+ * Clase manejadora de ficheros CSV's
+ * 
+ * es llamada desde CSVEliinar y CSVListar, ambas clases forman parte del patrón Strategy
+ * y simplementen llaman al método correspondiente de esta clase.
+ * 
+ * La encapsulación de los métodos en el wrapper hace más claro su funcionamiento
+ * 
+ * @author noegonmar
+ *
+ */
 public class CSVWrapper {
 
-	public void listar(String matricula) {
+	public int listar(String matricula) {
 
 		String csvFile = "db/multas.csv";
 		BufferedReader br = null;
 		String line = "";
 		String cvsSplitBy = ",";
 
+		int encontradas = 0;
+		
 		try {
 
 			br = new BufferedReader(new FileReader(csvFile));
@@ -83,8 +96,9 @@ public class CSVWrapper {
 				}
 			}
 
-			for (i = 0; i < arrMultas.size(); i++) {
-				if (matricula.equals(arrMultas.get(i).getMatricula())) {
+			
+			for (i = 0; i < arrMultas.size(); i++) {				
+				if (matricula.equals("*") || matricula.equals(arrMultas.get(i).getMatricula())) {
 					System.out.println(arrMultas.get(i).toString());
 				}
 			}
@@ -102,6 +116,8 @@ public class CSVWrapper {
 				}
 			}
 		}
+		
+		return encontradas;
 	}
 
 	public boolean eliminar(String idMulta) throws IOException {

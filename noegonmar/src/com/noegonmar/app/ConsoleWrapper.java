@@ -5,6 +5,15 @@ import java.io.Console;
 import java.io.FileReader;
 import java.io.IOException;
 
+/**
+ * Clase manejadora de la consola del sistema
+ * 
+ * La utilizamos para evitar que se muestre el password cuando se escribe en la consola
+ * así como imprimir textos definidos en las plantillas de la aplicación
+ * 
+ * @author noegonmar
+ *
+ */
 public class ConsoleWrapper {
 
 	public static String promptPassword() {
@@ -19,22 +28,8 @@ public class ConsoleWrapper {
 		return pass;
 	}
 
-	public static void clearConsole() throws IOException {
-		final String os = System.getProperty("os.name");
-
-		if (os.contains("Windows")) {
-			Runtime.getRuntime().exec("cls");
-		} else {
-			Runtime.getRuntime().exec("clear");
-		}
-	}
-
-	public static void printTemplate(String template, boolean clearConsole)
+	public static void printTemplate(String template)
 			throws IOException {
-
-		if (clearConsole) {
-			clearConsole();
-		}
 
 		BufferedReader br;
 		try {

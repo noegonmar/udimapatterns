@@ -7,22 +7,23 @@ import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * Clase abstracta que declara una serie de métodos para un objeto concreto de
+ * esta familia de multas.
+ * 
+ * @author noegonmar
+ *
+ */
 public abstract class MultaGrave extends Multa {
 
-	int puntos;
+	
 
 	@Override
 	public abstract String toString();
 
 	public abstract String toCSV();
 
-	public int getPuntos() {
-		return puntos;
-	}
-
-	public void setPuntos(int puntos) {
-		this.puntos = puntos;
-	}
+	
 
 	public void guardar() {
 

@@ -2,6 +2,12 @@ package com.noegonmar.patter.abstractfactory;
 
 import com.noegonmar.patern.singleton.AppUser;
 
+/**
+ * Producto concreto de la factoría que extiende de la clase abstracta MultaGrave
+ * 
+ * @author noegonmar
+ *
+ */
 public class MultaGraveSinPuntos extends MultaGrave {
 
 	final static String tipoMulta = "MGSP";
