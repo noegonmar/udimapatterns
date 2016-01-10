@@ -1,10 +1,14 @@
 package com.noegonmar.patter.abstractfactory;
 
-import javax.rmi.CORBA.Tie;
+import com.noegonmar.patern.singleton.AppUser;
 
 public class MultaMuyGraveConPuntos extends MultaMuyGrave {
 
 	final static String tipoMulta = "MMGCP";
+	
+	public MultaMuyGraveConPuntos(){
+		this.agente = AppUser.getAppUser().getNumAgente();
+	}
 	
 	@Override
 	public String toString() {
@@ -36,6 +40,10 @@ public class MultaMuyGraveConPuntos extends MultaMuyGrave {
 	public Boolean isCarcel() {
 		return null;
 	}
-
+	
+	public void setCarcel(Boolean carcel) {
+		this.carcel = carcel;
+		
+	}
 
 }

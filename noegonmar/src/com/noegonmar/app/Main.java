@@ -13,7 +13,7 @@ import com.noegonmar.pattern.strategy.UsingSingleton;
 public class Main {
 
 	public static void main(String[] args) throws IOException {
-
+		
 		// Login en la app
 		ConsoleWrapper.printTemplate("WelcomeMessage", true);
 
@@ -81,7 +81,18 @@ public class Main {
 						paternContext.use();
 						break;
 					case 3:
-
+						// Listar las multas de una matrícula dada
+						System.out.println("Matrícula: ");
+						String matricula = br.readLine();
+						CSVWrapper csvw = new CSVWrapper();
+						csvw.listar(matricula);
+						break;
+					case 4:
+						System.out.println("Id Multa: ");
+						String idMulta = br.readLine();
+						csvw = new CSVWrapper();
+						csvw.eliminar(idMulta);
+						break;
 					case 9:
 						System.out.println("Hasta pronto!");
 						break;

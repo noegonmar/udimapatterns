@@ -1,3 +1,2 @@
 id,tipo,fecha,matricula,velocidadvia,velocidadvehiculo,sancion,puntos,agente,carcel
-null,MGSP,null,098765432,0,0,0,0,null0
-null,MGCP,null,765456,0,0,0,90,null0
+2,MGCP,null,5678,0,0,0,90,null0,

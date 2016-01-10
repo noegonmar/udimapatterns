@@ -17,6 +17,8 @@ public abstract class MultaMuyGrave extends Multa {
 	public abstract String toString();
 
 	public abstract Boolean isCarcel();
+	
+	public abstract void setCarcel(Boolean carcel);
 
 	public abstract String toCSV();
 

@@ -1,8 +1,14 @@
 package com.noegonmar.patter.abstractfactory;
 
+import com.noegonmar.patern.singleton.AppUser;
+
 public class MultaGraveSinPuntos extends MultaGrave {
 
 	final static String tipoMulta = "MGSP";
+	
+	public MultaGraveSinPuntos(){
+		this.agente = AppUser.getAppUser().getNumAgente();
+	}
 	
 	@Override
 	public String toString() {
