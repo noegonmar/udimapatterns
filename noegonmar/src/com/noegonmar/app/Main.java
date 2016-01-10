@@ -80,6 +80,7 @@ public class Main {
 						accion = Integer.parseInt(br.readLine());
 					} catch (NumberFormatException nfe) {
 						System.err.println("Opción inválida!");
+						accion = -1;
 					}
 
 					/*
