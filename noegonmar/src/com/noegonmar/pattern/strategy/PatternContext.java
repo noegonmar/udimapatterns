@@ -1,6 +1,5 @@
 package com.noegonmar.pattern.strategy;
 
-
 public class PatternContext {
 	Using usingPattern;
 
@@ -13,10 +12,12 @@ public class PatternContext {
 	}
 
 	public void use() {
-		System.out.println("----------  Usando patrón "+usingPattern.getPatternName()+"  ----------");
+		System.out.println("----------  Usando patrón "
+				+ usingPattern.getPatternName() + "  ----------");
 
 		usingPattern.usePattern();
 
-		System.out.println("---------- Fin del patrón "+usingPattern.getPatternName()+" -----------");
+		System.out.println("---------- Fin del patrón "
+				+ usingPattern.getPatternName() + " -----------");
 	}
 }

@@ -1,58 +1,41 @@
 package com.noegonmar.patter.abstractfactory;
 
-import java.util.Date;
+import javax.rmi.CORBA.Tie;
 
 public class MultaMuyGraveConPuntos extends MultaMuyGrave {
 
-	@Override
-	public Prototipo clone() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public String getAgente(String agente) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public String getMatricula() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Date getFecha() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public String getVelocidadVia() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public float getSancion() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public int getPuntos() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public String getArticulo() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
+	final static String tipoMulta = "MMGCP";
 	
+	@Override
+	public String toString() {
+		
+		String tieneCarcel = (carcel == true) ? "1" : "0";
+		
+		return "ID: "+idMulta+", Tipo:"+tipoMulta+", Fecha: "+fecha+", Matrícula: "+matricula+
+				", Vel. Vía: "+velocidadVia+
+				", Vel. Vehículo: "+velocidadVehiculo+
+				", Sanción: "+sancion+", Puntos:"+puntos+", Agente: "+agente+", Carcel:"+tieneCarcel;
+	}
+	
+	@Override
+	public String toCSV() {
+		String tieneCarcel = (carcel == true) ? "1" : "0";
+		return 	idMulta+
+				","+tipoMulta+
+				","+fecha+
+				","+matricula+
+				","+velocidadVia+
+				","+velocidadVehiculo+
+				","+sancion+
+				","+puntos+
+				","+agente+
+				","+tieneCarcel;
+		}
+	
+	@Override
+	public Boolean isCarcel() {
+		return null;
+	}
 
 
 }

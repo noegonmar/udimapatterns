@@ -1,126 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.1.9" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="com.noegonmar.patter.abstractfactory.MultaMuyGraveSinPuntos" project="noegonmar" 
-    file="/noegonmar/src/com/noegonmar/patter/abstractfactory/MultaMuyGraveSinPuntos.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="170" width="186" x="442" y="342"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="2" language="java" name="com.noegonmar.patter.abstractfactory.MultaGraveSinPuntos" project="noegonmar" 
-    file="/noegonmar/src/com/noegonmar/patter/abstractfactory/MultaGraveSinPuntos.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="170" width="186" x="-10" y="342"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="3" language="java" name="com.noegonmar.patter.abstractfactory.FabricaMultasSinPuntos" project="noegonmar" 
-    file="/noegonmar/src/com/noegonmar/patter/abstractfactory/FabricaMultasSinPuntos.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="116" width="192" x="436" y="-24"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="4" language="java" name="com.noegonmar.patter.abstractfactory.Multa" project="noegonmar" 
-    file="/noegonmar/src/com/noegonmar/patter/abstractfactory/Multa.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="188" width="186" x="210" y="-24"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="5" language="java" name="com.noegonmar.patter.abstractfactory.MultaMuyGrave" project="noegonmar" 
-    file="/noegonmar/src/com/noegonmar/patter/abstractfactory/MultaMuyGrave.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="80" width="186" x="442" y="204"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="6" language="java" name="com.noegonmar.patter.abstractfactory.MultaMuyGraveConPuntos" project="noegonmar" 
-    file="/noegonmar/src/com/noegonmar/patter/abstractfactory/MultaMuyGraveConPuntos.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="170" width="186" x="668" y="342"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="7" language="java" name="com.noegonmar.patter.abstractfactory.FabricaMultasConPuntos" project="noegonmar" 
-    file="/noegonmar/src/com/noegonmar/patter/abstractfactory/FabricaMultasConPuntos.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="116" width="198" x="668" y="-24"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <interface id="8" language="java" name="com.noegonmar.patter.abstractfactory.FabricaMultas" project="noegonmar" 
-    file="/noegonmar/src/com/noegonmar/patter/abstractfactory/FabricaMultas.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="98" width="186" x="668" y="204"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </interface>  
-  <interface id="9" language="java" name="com.noegonmar.patter.abstractfactory.Prototipo" project="noegonmar" 
-    file="/noegonmar/src/com/noegonmar/patter/abstractfactory/Prototipo.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="62" width="186" x="216" y="204"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </interface>  
-  <class id="10" language="java" name="com.noegonmar.patter.abstractfactory.MultaGraveConPuntos" project="noegonmar" 
+  <class id="1" language="java" name="com.noegonmar.patter.abstractfactory.MultaGraveConPuntos" project="noegonmar" 
     file="/noegonmar/src/com/noegonmar/patter/abstractfactory/MultaGraveConPuntos.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="170" width="186" x="216" y="342"/>    
+    <position height="-1" width="-1" x="804" y="164"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <generalization id="11">    
-    <end type="SOURCE" refId="5"/>    
+  <class id="2" language="java" name="com.noegonmar.patter.abstractfactory.FabricaMultasSinPuntos" project="noegonmar" 
+    file="/noegonmar/src/com/noegonmar/patter/abstractfactory/FabricaMultasSinPuntos.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="494" y="401"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="com.noegonmar.patter.abstractfactory.FabricaMultasConPuntos" project="noegonmar" 
+    file="/noegonmar/src/com/noegonmar/patter/abstractfactory/FabricaMultasConPuntos.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="500" y="126"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="4" language="java" name="com.noegonmar.patter.abstractfactory.FabricaMultas" project="noegonmar" 
+    file="/noegonmar/src/com/noegonmar/patter/abstractfactory/FabricaMultas.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="204" y="261"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="5" language="java" name="com.noegonmar.patter.abstractfactory.MultaGrave" project="noegonmar" 
+    file="/noegonmar/src/com/noegonmar/patter/abstractfactory/MultaGrave.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1053" y="249"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="com.noegonmar.patter.abstractfactory.MultaGraveSinPuntos" project="noegonmar" 
+    file="/noegonmar/src/com/noegonmar/patter/abstractfactory/MultaGraveSinPuntos.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="801" y="416"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <realization id="7">    
+    <end type="SOURCE" refId="3"/>    
     <end type="TARGET" refId="4"/>  
-  </generalization>  
-  <generalization id="12">    
+  </realization>  
+  <association id="8">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="9" name="mgsp"/>      
+      <multiplicity id="10" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="11">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="12" name="mgcp"/>      
+      <multiplicity id="13" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="14">    
     <end type="SOURCE" refId="1"/>    
     <end type="TARGET" refId="5"/>  
   </generalization>  
-  <generalization id="13">    
+  <realization id="15">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </realization>  
+  <generalization id="16">    
     <end type="SOURCE" refId="6"/>    
     <end type="TARGET" refId="5"/>  
   </generalization>  
-  <realization id="14">    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="9"/>  
-  </realization>  
-  <realization id="15">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="8"/>  
-  </realization>  
-  <realization id="16">    
-    <end type="SOURCE" refId="7"/>    
-    <end type="TARGET" refId="8"/>  
-  </realization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    

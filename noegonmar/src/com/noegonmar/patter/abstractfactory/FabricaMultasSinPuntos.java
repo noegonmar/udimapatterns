@@ -2,6 +2,8 @@ package com.noegonmar.patter.abstractfactory;
 
 public class FabricaMultasSinPuntos implements FabricaMultas {
 
+	MultaGraveSinPuntos mgsp = new MultaGraveSinPuntos();
+
 	@Override
 	public MultaGrave crearMultaGrave() {
 		return new MultaGraveSinPuntos();
@@ -9,7 +11,7 @@ public class FabricaMultasSinPuntos implements FabricaMultas {
 
 	@Override
 	public MultaMuyGrave crearMultaMuyGrave() {
-		// TODO Auto-generated method stub
+		// No existen las multas muy graves sin puntos
 		return null;
 	}
 

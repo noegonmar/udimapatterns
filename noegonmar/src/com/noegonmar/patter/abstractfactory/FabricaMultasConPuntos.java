@@ -2,14 +2,19 @@ package com.noegonmar.patter.abstractfactory;
 
 public class FabricaMultasConPuntos implements FabricaMultas {
 
-	@Override
-	public MultaMuyGrave crearMultaMuyGrave() {
-		return new MultaMuyGraveConPuntos();
-	}
+	MultaGraveConPuntos mgcp;
+	MultaMuyGraveConPuntos mmgcp;
 
 	@Override
 	public MultaGrave crearMultaGrave() {
-		return new MultaGraveConPuntos();
+		mgcp = new MultaGraveConPuntos();
+		return mgcp;
+	}
+
+	@Override
+	public MultaMuyGrave crearMultaMuyGrave() {
+		mmgcp = new MultaMuyGraveConPuntos();
+		return mmgcp;
 	}
 
 }

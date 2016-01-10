@@ -7,16 +7,18 @@ import java.io.IOException;
 
 public class ConsoleWrapper {
 
-	public static String promptPassword(){
+	public static String promptPassword() {
 		Console console = System.console();
-	    if (console == null) { //Si no encontramos la consola, es que estamos en un IDE
-	        return "";
-	    }
+		if (console == null) { // Si no encontramos la consola, es que estamos
+								// en un IDE
+			return "";
+		}
 
-	    char passwordArray[] = console.readPassword("Contraseña: ");
-	    String pass = new String(passwordArray);
-	    return pass;
+		char passwordArray[] = console.readPassword("Contraseña: ");
+		String pass = new String(passwordArray);
+		return pass;
 	}
+
 	public static void clearConsole() throws IOException {
 		final String os = System.getProperty("os.name");
 

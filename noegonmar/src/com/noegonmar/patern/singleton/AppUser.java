@@ -10,9 +10,9 @@ public class AppUser {
 
 	/**
 	 * Dado que el constructor de esta clase es privado (por usar Singleton),
-	 * esta función nos devuelve el objeto creado con anterioridad o,
-	 * si no está creado, lo crea en ese mismo momento.
-	 * Así se evita que existan más de 1 objeto de esta clase a la vez
+	 * esta función nos devuelve el objeto creado con anterioridad o, si no está
+	 * creado, lo crea en ese mismo momento. Así se evita que existan más de 1
+	 * objeto de esta clase a la vez
 	 *
 	 * @return AppUser
 	 */
@@ -22,12 +22,12 @@ public class AppUser {
 		}
 		return appUser;
 	}
-	
+
 	/**
 	 * Dado que el constructor de esta clase es privado (por usar Singleton),
-	 * esta función nos devuelve el objeto creado con anterioridad o,
-	 * si no está creado, lo crea en ese mismo momento.
-	 * Así se evita que existan más de 1 objeto de esta clase a la vez
+	 * esta función nos devuelve el objeto creado con anterioridad o, si no está
+	 * creado, lo crea en ese mismo momento. Así se evita que existan más de 1
+	 * objeto de esta clase a la vez
 	 *
 	 * @return AppUser
 	 */
@@ -40,6 +40,7 @@ public class AppUser {
 
 	/**
 	 * Constructor privado para respetar el patrón Singleton
+	 * 
 	 * @param username
 	 * @param numagente
 	 */
@@ -47,9 +48,10 @@ public class AppUser {
 		this.username = username;
 		this.numagente = numagente;
 	}
-	
+
 	/**
 	 * Constructor privado para respetar el patrón Singleton
+	 * 
 	 * @param username
 	 * @param numagente
 	 */

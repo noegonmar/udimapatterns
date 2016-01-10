@@ -1,29 +1,85 @@
 package com.noegonmar.patter.abstractfactory;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Date;
 
-public abstract class Multa implements Prototipo {
+public abstract class Multa {
 
-	@Override
-	
-	public abstract Prototipo clone();
-	
-	public abstract String getAgente(String agente);
+	String idMulta;
+	String fecha;
+	String matricula;
+	int velocidadVia;
+	int velocidadVehiculo;
+	int sancion;
+	String agente;
 
-	public abstract String getMatricula();
+	public String getIdMulta() {
+		return idMulta;
+	}
 
-	public abstract Date getFecha();
-	
-	public abstract String getVelocidadVia();
+	public void setIdMulta(String idMulta) {
+		this.idMulta = idMulta;
+	}
 
-	public abstract float getSancion();
-	
-	public abstract int getPuntos();
-	
-	public abstract String getArticulo();
+	public String getFecha() {
+		return fecha;
+	}
 
-	@Override
-	public String toString() {
-		return  "Fecha: "+getFecha() + ", Matrícula: " + getMatricula() + ", Velocidad de la via: " + getVelocidadVia() + ", Sanción: " + getSancion() + ", Puntos: " + getPuntos() + ", Artículo: " + getArticulo() ;
+	public void setFecha(String fecha) {
+		this.fecha = fecha;
+	}
+
+	public String getMatricula() {
+		return matricula;
+	}
+
+	public void setMatricula(String matricula) {
+		this.matricula = matricula;
+	}
+
+	public int getVelocidadVia() {
+		return velocidadVia;
+	}
+
+	public void setVelocidadVia(int velcidadVia) {
+		this.velocidadVia = velcidadVia;
+	}
+
+	public int getVelocidadVehiculo() {
+		return velocidadVehiculo;
+	}
+
+	public void setVelocidadVehiculo(int velocidadVehiculo) {
+		this.velocidadVehiculo = velocidadVehiculo;
+	}
+
+	public int getSancion() {
+		return sancion;
+	}
+
+	public void setSancion(int sancion) {
+		this.sancion = sancion;
+	}
+
+	public String getAgente() {
+		return agente;
+	}
+
+	public void setAgente(String agente) {
+		this.agente = agente;
+	}
+
+	public void wizard() {
+
+		try {
+			BufferedReader br = new BufferedReader(new InputStreamReader(
+					System.in));
+			System.out.println("Matrícula: ");
+			this.matricula = br.readLine();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 }

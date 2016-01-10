@@ -1,9 +1,10 @@
 ---------------------
-Seleccione una opción
+Seleccione una opción (Estamos usando Strategy)
 ---------------------
 1 ver usuario logado (usar singleton)
 2 crear multa
-3 ver multa
+3 ver multas
+4 eliminar multa
 9 salir
 
 ¿Qué desea hacer?: 
