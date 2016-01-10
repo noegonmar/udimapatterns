@@ -2,10 +2,17 @@ package com.noegonmar.patter.abstractfactory;
 
 import java.util.Date;
 
-public class SemaforoConPuntos extends Semaforo {
+public class MultaGraveSinPuntos extends MultaGrave{
 
 	@Override
 	public Prototipo clone() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getAgente(String agente) {
+		// TODO Auto-generated method stub
 		return null;
 	}
 
@@ -22,6 +29,12 @@ public class SemaforoConPuntos extends Semaforo {
 	}
 
 	@Override
+	public String getVelocidadVia() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
 	public float getSancion() {
 		// TODO Auto-generated method stub
 		return 0;
@@ -33,5 +46,12 @@ public class SemaforoConPuntos extends Semaforo {
 		return 0;
 	}
 
+	@Override
+	public String getArticulo() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
 
 }

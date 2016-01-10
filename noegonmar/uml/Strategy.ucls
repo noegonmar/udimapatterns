@@ -3,7 +3,7 @@
   associations="true" dependencies="true" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="com.noegonmar.pattern.strategy.UsingAdapter" project="noegonmar" 
     file="/noegonmar/src/com/noegonmar/pattern/strategy/UsingAdapter.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="116" width="161" x="19" y="404"/>    
+    <position height="116" width="161" x="-182" y="299"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -12,7 +12,7 @@
   </class>  
   <class id="2" language="java" name="com.noegonmar.pattern.strategy.Using" project="noegonmar" 
     file="/noegonmar/src/com/noegonmar/pattern/strategy/Using.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="116" width="161" x="220" y="248"/>    
+    <position height="116" width="161" x="19" y="143"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -21,7 +21,7 @@
   </class>  
   <class id="3" language="java" name="com.noegonmar.pattern.strategy.UsingSingleton" project="noegonmar" 
     file="/noegonmar/src/com/noegonmar/pattern/strategy/UsingSingleton.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="116" width="161" x="220" y="404"/>    
+    <position height="116" width="161" x="19" y="299"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -30,7 +30,7 @@
   </class>  
   <class id="4" language="java" name="com.noegonmar.pattern.strategy.PatternContext" project="noegonmar" 
     file="/noegonmar/src/com/noegonmar/pattern/strategy/PatternContext.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="293" y="148"/>    
+    <position height="116" width="189" x="19" y="-13"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -39,25 +39,30 @@
   </class>  
   <class id="5" language="java" name="com.noegonmar.pattern.strategy.UsingAbstractFactory" project="noegonmar" 
     file="/noegonmar/src/com/noegonmar/pattern/strategy/UsingAbstractFactory.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="116" width="174" x="421" y="404"/>    
+    <position height="116" width="174" x="220" y="299"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <generalization id="6">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="2"/>  
-  </generalization>  
-  <generalization id="7">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="2"/>  
-  </generalization>  
-  <generalization id="8">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="2"/>  
-  </generalization>  
+  <class id="6" language="java" name="com.noegonmar.app.Main" project="noegonmar" 
+    file="/noegonmar/src/com/noegonmar/app/Main.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="98" width="125" x="310" y="23"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <dependency id="7">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="3"/>  
+  </dependency>  
+  <dependency id="8">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="4"/>  
+  </dependency>  
   <association id="9">    
     <end type="SOURCE" refId="4" navigable="false">      
       <attribute id="10" name="usingPattern"/>      
@@ -66,6 +71,22 @@
     <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
+  <generalization id="12">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="13">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="14">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <dependency id="15">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="5"/>  
+  </dependency>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    

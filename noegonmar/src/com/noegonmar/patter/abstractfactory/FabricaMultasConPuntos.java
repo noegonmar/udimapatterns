@@ -3,13 +3,13 @@ package com.noegonmar.patter.abstractfactory;
 public class FabricaMultasConPuntos implements FabricaMultas {
 
 	@Override
-	public Semaforo crearSemaforo() {
-		return new SemaforoConPuntos();
+	public MultaMuyGrave crearMultaMuyGrave() {
+		return new MultaMuyGraveConPuntos();
 	}
 
 	@Override
-	public Radar crearRadar() {
-		return new RadarConPuntos();
+	public MultaGrave crearMultaGrave() {
+		return new MultaGraveConPuntos();
 	}
 
 }

@@ -2,12 +2,19 @@ package com.noegonmar.patter.abstractfactory;
 
 import java.util.Date;
 
-public class RadarSinPuntos extends Radar{
+public class MultaGraveConPuntos extends MultaGrave{
 
 	@Override
-    public Prototipo clone() {
-            return new RadarSinPuntos();
-    }
+	public Prototipo clone() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getAgente(String agente) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 	@Override
 	public String getMatricula() {
@@ -17,6 +24,12 @@ public class RadarSinPuntos extends Radar{
 
 	@Override
 	public Date getFecha() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getVelocidadVia() {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -33,4 +46,11 @@ public class RadarSinPuntos extends Radar{
 		return 0;
 	}
 
+	@Override
+	public String getArticulo() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
 }

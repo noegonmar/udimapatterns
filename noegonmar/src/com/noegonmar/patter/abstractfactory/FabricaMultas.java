@@ -2,7 +2,7 @@ package com.noegonmar.patter.abstractfactory;
 
 public interface FabricaMultas {
 
-	public Semaforo crearSemaforo();
+	public MultaMuyGrave crearMultaMuyGrave();
 
-	public Radar crearRadar();
+	public MultaGrave crearMultaGrave();
 }

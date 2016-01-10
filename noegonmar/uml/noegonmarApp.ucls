@@ -3,7 +3,7 @@
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="com.noegonmar.app.Config" project="noegonmar" 
     file="/noegonmar/src/com/noegonmar/app/Config.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="316" y="196"/>    
+    <position height="134" width="165" x="40" y="49"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -12,7 +12,7 @@
   </class>  
   <class id="2" language="java" name="com.noegonmar.app.ConsoleWrapper" project="noegonmar" 
     file="/noegonmar/src/com/noegonmar/app/ConsoleWrapper.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="632" y="376"/>    
+    <position height="134" width="215" x="245" y="49"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -21,7 +21,7 @@
   </class>  
   <class id="3" language="java" name="com.noegonmar.app.Login" project="noegonmar" 
     file="/noegonmar/src/com/noegonmar/app/Login.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="316" y="376"/>    
+    <position height="134" width="177" x="500" y="49"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -30,7 +30,7 @@
   </class>  
   <class id="4" language="java" name="com.noegonmar.app.Main" project="noegonmar" 
     file="/noegonmar/src/com/noegonmar/app/Main.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="622" y="190"/>    
+    <position height="98" width="125" x="717" y="49"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      

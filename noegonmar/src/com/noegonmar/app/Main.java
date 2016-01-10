@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 
 import com.noegonmar.patern.singleton.AppUser;
 import com.noegonmar.pattern.strategy.PatternContext;
+import com.noegonmar.pattern.strategy.Using;
 import com.noegonmar.pattern.strategy.UsingAbstractFactory;
 import com.noegonmar.pattern.strategy.UsingSingleton;
 
@@ -61,20 +62,20 @@ public class Main {
 			        switch (accion){
 			        case 1:
 			        	//Uso del patrón Singleton
-			        	UsingSingleton usingSingleton = new UsingSingleton();
+			        	Using usingSingleton = new UsingSingleton();
 			        	paternContext = new PatternContext(usingSingleton);
 			        	paternContext.use();
 			        	break;
 			        case 2:
 			        	/*
 			        	 * A la hora de crear una multa, usamos el patrón AbstractFactory
-			        	 * pero si creamos una multa de tipo RadarConCarcel
+			        	 * pero si creamos una multa de tipo MultaConCarcel
 			        	 * utilizaremos también el patrón Adapter,
 			        	 * ya que ese tipo de multa no respeta las clases/estructura implementada
 			        	 * y hemos tenido que hacer un adapter para no modificar lo existente
 			        	 */
 			        	//Uso del patrón AbstractFactory
-			        	UsingAbstractFactory usingAbstractFactory = new UsingAbstractFactory();
+			        	Using usingAbstractFactory = new UsingAbstractFactory();
 			        	paternContext = new PatternContext(usingAbstractFactory);
 			        	paternContext.use();
 			        	break;

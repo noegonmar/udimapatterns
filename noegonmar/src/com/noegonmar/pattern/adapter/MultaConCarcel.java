@@ -2,7 +2,7 @@ package com.noegonmar.pattern.adapter;
 
 import java.util.Date;
 
-public class RadarConCarcel {
+public class MultaConCarcel {
 
 	public String dimeMatricula() {
 		// TODO

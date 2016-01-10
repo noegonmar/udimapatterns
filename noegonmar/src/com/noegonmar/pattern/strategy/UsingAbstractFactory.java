@@ -4,7 +4,7 @@ import com.noegonmar.patter.abstractfactory.FabricaMultas;
 import com.noegonmar.patter.abstractfactory.FabricaMultasConPuntos;
 import com.noegonmar.patter.abstractfactory.FabricaMultasSinPuntos;
 import com.noegonmar.patter.abstractfactory.Radar;
-import com.noegonmar.patter.abstractfactory.Semaforo;
+import com.noegonmar.patter.abstractfactory.MultaMuyGrave;
 
 public class UsingAbstractFactory extends Using {
 
@@ -16,10 +16,10 @@ public class UsingAbstractFactory extends Using {
 
 		FabricaMultas fabrica;
 		Radar radar;
-		Semaforo semaforo;
+		MultaMuyGrave semaforo;
 		
 		fabrica = new FabricaMultasSinPuntos();
-		radar = fabrica.crearRadar();
+		radar = fabrica.crearMulta();
 		semaforo = fabrica.crearSemaforo();
 
 		fabrica = new FabricaMultasConPuntos();
